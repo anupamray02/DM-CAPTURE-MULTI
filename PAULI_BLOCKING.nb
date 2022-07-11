@@ -1,0 +1,309 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      7641,        301]
+NotebookOptionsPosition[      6501,        262]
+NotebookOutlinePosition[      6844,        277]
+CellTagsIndexPosition[      6801,        274]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]", 
+  StyleBox[
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{"ARXIV", " ", "1103.5472", " ", "V4", " ", "Samuel", " ", 
+      RowBox[{"D", ".", "McDermott"}]}], ",", 
+     RowBox[{"Hai", "-", 
+      RowBox[{"Bo", " ", "Yu"}]}], ",", 
+     RowBox[{"Kathryn", " ", 
+      RowBox[{"M", ".", "Zurek"}]}]}], "*)"}], "Section"]}]], "Input"],
+
+Cell[BoxData[
+ StyleBox[
+  RowBox[{"(*", 
+   RowBox[{
+   "PAULI", " ", "BLOCKING", " ", "FACTOR", " ", "WHITE", " ", "DWARF"}], 
+   "*)"}], "Section"]], "Input"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"G", "=", 
+    RowBox[{"6.67", "*", 
+     SuperscriptBox["10", 
+      RowBox[{"-", "11"}]]}]}], ";"}], 
+  RowBox[{"(*", 
+   RowBox[{"in", " ", "SI"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"hbar", "=", 
+    FractionBox[
+     RowBox[{"6.626", "*", 
+      SuperscriptBox["10", 
+       RowBox[{"-", "34"}]]}], 
+     RowBox[{"2", "*", "3.14"}]]}], ";"}], 
+  RowBox[{"(*", 
+   RowBox[{"in", " ", "SI"}], "*)"}]}]}], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"n", "=", 
+    SuperscriptBox["10", "36"]}], ";"}], 
+  RowBox[{"(*", 
+   RowBox[{"in", " ", 
+    SuperscriptBox["m", 
+     RowBox[{"-", "3"}]]}], "*)"}]}]], "Input"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"M", "=", 
+    RowBox[{"2", "*", 
+     SuperscriptBox["10", "30"]}]}], ";"}], 
+  RowBox[{"(*", 
+   RowBox[{"in", " ", "kg"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"R", "=", 
+    RowBox[{"0.01", "*", "6.95", "*", 
+     SuperscriptBox["10", "8"]}]}], ";"}], " ", 
+  RowBox[{"(*", 
+   RowBox[{"in", " ", "m"}], "*)"}]}]}], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"vesc", "=", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     FractionBox[
+      RowBox[{"2", "*", "G", "*", "M"}], "R"], ")"}], "0.5"]}], 
+  ";"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"mn", "=", "12"}], ";", 
+  RowBox[{"(*", 
+   RowBox[{"in", " ", "GeV"}], "*)"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"mr", "[", 
+    RowBox[{"mx_", "?", "NumericQ"}], "]"}], ":=", 
+   FractionBox[
+    RowBox[{"mn", " ", "*", "mx"}], 
+    RowBox[{"(", 
+     RowBox[{"mn", "+", "mx"}], ")"}]]}], ";"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"\[Delta]p", "[", 
+     RowBox[{"mx_", "?", "NumericQ"}], "]"}], ":=", 
+    RowBox[{
+     SuperscriptBox["2", "0.5"], "*", 
+     RowBox[{"mr", "[", "mx", "]"}], "*", "vesc", "*", "1.78", "*", 
+     SuperscriptBox["10", 
+      RowBox[{"-", "27"}]]}]}], ";"}], 
+  RowBox[{"(*", 
+   RowBox[{"in", " ", "kg", " ", 
+    RowBox[{"m", "/", "sec"}]}], "*)"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"pf", "=", 
+    RowBox[{"hbar", "*", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"3", "*", 
+        SuperscriptBox["\[Pi]", "2"], "*", "n"}], ")"}], 
+      FractionBox["1", "3"]]}]}], ";"}], 
+  RowBox[{"(*", 
+   RowBox[{"in", " ", "kg", " ", 
+    RowBox[{"m", "/", "sec"}]}], "*)"}]}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{"\[Delta]p", "[", "0.01", "]"}], "pf"]], "Input"],
+
+Cell[BoxData["0.47742844946816493`"], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+ StyleBox[
+  RowBox[{"(*", 
+   RowBox[{
+   "PAULI", " ", "BLOCKING", " ", "FACTOR", " ", "NEUTRON", " ", "STAR"}], 
+   "*)"}], "Section"]], "Input"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"G", "=", 
+    RowBox[{"6.67", "*", 
+     SuperscriptBox["10", 
+      RowBox[{"-", "11"}]]}]}], ";"}], 
+  RowBox[{"(*", 
+   RowBox[{"in", " ", "SI"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"hbar", "=", 
+    FractionBox[
+     RowBox[{"6.626", "*", 
+      SuperscriptBox["10", 
+       RowBox[{"-", "34"}]]}], 
+     RowBox[{"2", "*", "3.14"}]]}], ";"}], 
+  RowBox[{"(*", 
+   RowBox[{"in", " ", "SI"}], "*)"}]}]}], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"n", "=", 
+    SuperscriptBox["10", "44"]}], ";"}], 
+  RowBox[{"(*", 
+   RowBox[{"in", " ", 
+    SuperscriptBox["m", 
+     RowBox[{"-", "3"}]]}], "*)"}]}]], "Input"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"M", "=", 
+    RowBox[{"2", "*", 
+     SuperscriptBox["10", "30"]}]}], ";"}], 
+  RowBox[{"(*", 
+   RowBox[{"in", " ", "kg"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"R", "=", 
+   SuperscriptBox["10", "4"]}], ";", " ", 
+  RowBox[{"(*", 
+   RowBox[{"in", " ", "m"}], "*)"}]}]}], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"vesc", "=", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     FractionBox[
+      RowBox[{"2", "*", "G", "*", "M"}], "R"], ")"}], "0.5"]}], 
+  ";"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"mn", "=", "0.9"}], ";", 
+  RowBox[{"(*", 
+   RowBox[{"in", " ", "GeV"}], "*)"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"mr", "[", 
+    RowBox[{"mx_", "?", "NumericQ"}], "]"}], ":=", 
+   FractionBox[
+    RowBox[{"mn", " ", "*", "mx"}], 
+    RowBox[{"(", 
+     RowBox[{"mn", "+", "mx"}], ")"}]]}], ";"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"\[Delta]p", "[", 
+     RowBox[{"mx_", "?", "NumericQ"}], "]"}], ":=", 
+    RowBox[{
+     SuperscriptBox["2", "0.5"], "*", 
+     RowBox[{"mr", "[", "mx", "]"}], "*", "vesc", "*", "1.78", "*", 
+     SuperscriptBox["10", 
+      RowBox[{"-", "27"}]]}]}], ";"}], 
+  RowBox[{"(*", 
+   RowBox[{"in", " ", "kg", " ", 
+    RowBox[{"m", "/", "sec"}]}], "*)"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"pf", "=", 
+    RowBox[{"hbar", "*", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"3", "*", 
+        SuperscriptBox["\[Pi]", "2"], "*", "n"}], ")"}], 
+      FractionBox["1", "3"]]}]}], ";"}], 
+  RowBox[{"(*", 
+   RowBox[{"in", " ", "kg", " ", 
+    RowBox[{"m", "/", "sec"}]}], "*)"}]}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{"\[Delta]p", "[", "0.1", "]"}], "pf"]], "Input"],
+
+Cell[BoxData["0.24425209701643494`"], "Output"]
+}, Open  ]]
+},
+WindowSize->{1366, 685},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (July 28, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 399, 10, 80, "Input"],
+Cell[960, 32, 161, 5, 54, "Input"],
+Cell[1124, 39, 494, 18, 78, "Input"],
+Cell[1621, 59, 211, 8, 30, "Input"],
+Cell[1835, 69, 404, 14, 50, "Input"],
+Cell[2242, 85, 186, 7, 54, "Input"],
+Cell[2431, 94, 126, 4, 30, "Input"],
+Cell[2560, 100, 239, 8, 54, "Input"],
+Cell[2802, 110, 422, 13, 30, "Input"],
+Cell[3227, 125, 354, 12, 45, "Input"],
+Cell[CellGroupData[{
+Cell[3606, 141, 87, 2, 57, "Input"],
+Cell[3696, 145, 47, 0, 30, "Output"]
+}, Open  ]],
+Cell[3758, 148, 162, 5, 54, "Input"],
+Cell[3923, 155, 494, 18, 78, "Input"],
+Cell[4420, 175, 211, 8, 30, "Input"],
+Cell[4634, 185, 347, 12, 50, "Input"],
+Cell[4984, 199, 186, 7, 54, "Input"],
+Cell[5173, 208, 127, 4, 30, "Input"],
+Cell[5303, 214, 239, 8, 54, "Input"],
+Cell[5545, 224, 422, 13, 30, "Input"],
+Cell[5970, 239, 354, 12, 45, "Input"],
+Cell[CellGroupData[{
+Cell[6349, 255, 86, 2, 57, "Input"],
+Cell[6438, 259, 47, 0, 30, "Output"]
+}, Open  ]]
+}
+]
+*)
+
